@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ece5dd;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 30%;
+    background: #075e54;
+    color: white;
+    padding: 15px;
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Chat Section */
+.chat-section {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background: #efeae2;
+}
+
+.chat-header {
+    background: #128c7e;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 10px;
+    max-width: 60%;
+    position: relative;
+    font-size: 14px;
+}
+
+.sent {
+    background: #dcf8c6;
+    align-self: flex-end;
+}
+
+.received {
+    background: white;
+    align-self: flex-start;
+}
+
+.time {
+    font-size: 10px;
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.delete-btn {
+    font-size: 10px;
+    cursor: pointer;
+    color: red;
+    margin-left: 5px;
+}
+
+/* Input */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    background: #25d366;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+/* Dark Mode */
+.dark {
+    background: #121212;
+}
+
+.dark .chat-section {
+    background: #1e1e1e;
+}
+
+.dark .chat-header {
+    background: #222;
+}
+
+.dark .sidebar {
+    background: #111;
+}
+
+.dark .sent {
+    background: #056162;
+    color: white;
+}
+
+.dark .received {
+    background: #262d31;
+    color: white;
+}
+/* Emoji Picker */
+.emoji-picker {
+    position: absolute;
+    bottom: 60px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    max-width: 200px;
+    flex-wrap: wrap;
+}
+
+.emoji-picker span {
+    cursor: pointer;
+    font-size: 18px;
+    margin: 5px;
+}
+
+/* Double Tick */
+.tick {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+/* Status offline style */
+.offline {
+    color: lightgray;
+}
+/* Avatar */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+/* ========================= */
+/* MOBILE RESPONSIVE DESIGN  */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .app {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 40%;
+        overflow-y: auto;
+    }
+
+    .chat-section {
+        width: 100%;
+        height: 60%;
+    }
+
+    .chat-box {
+        padding: 10px;
+    }
+
+    .message {
+        max-width: 80%;
+        font-size: 13px;
+    }
+
+    .chat-input {
+        position: relative;
+    }
+
+    .emoji-picker {
+        bottom: 70px;
+        left: 10px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .chat-section {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .chat-header h3 {
+        font-size: 16px;
+    }
+
+    .chat-input input {
+        font-size: 14px;
+    }
+
+    .chat-input button {
+        padding: 8px;
+    }
+}

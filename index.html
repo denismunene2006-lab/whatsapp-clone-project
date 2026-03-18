@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Chats</h2>
+        <input type="text" id="search" placeholder="Search contact...">
+        <ul id="contactList">
+    <li class="contact">
+        <img src="https://i.pravatar.cc/40?img=5" class="avatar">
+        <span>Joy 💚</span>
+    </li>
+    <li class="contact">
+        <img src="https://i.pravatar.cc/40?img=8" class="avatar">
+        <span>Brian</span>
+    </li>
+    <li class="contact">
+        <img src="https://i.pravatar.cc/40?img=12" class="avatar">
+        <span>Sarah</span>
+    </li>
+</ul>
+    </div>
+
+    <!-- Chat Section -->
+    <div class="chat-section">
+        <div class="chat-header">
+    <div class="header-left">
+        <img id="headerAvatar" src="https://i.pravatar.cc/40?img=5" class="avatar">
+        <div>
+            <h3 id="chatName">Joy 💚</h3>
+            <small id="statusText">online</small>
+        </div>
+    </div>
+    <button id="darkModeToggle">🌙</button>
+</div>
+
+        <div class="chat-box" id="chatBox"></div>
+
+        <div class="chat-input">
+    <button id="emojiBtn">😀</button>
+    <div id="emojiPicker" class="emoji-picker"></div>
+    <input type="text" id="messageInput" placeholder="Type a message">
+    <button id="sendBtn">Send</button>
+</div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
