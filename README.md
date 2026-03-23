@@ -81,10 +81,6 @@ whatsappp-clone/
 
 ---
 
-## Preview
-(Add screenshots here)
-
----
 
 ## Author
 Denis Munene
