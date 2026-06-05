@@ -207,6 +207,10 @@ body {
 
 @media (max-width: 768px) {
 
+    .header-left {
+        gap: 15px; /* This creates a guaranteed 15px space between Menu, Avatar, and Text */
+    }
+
     .menu-btn {
         display: block;
         background: none;
@@ -214,8 +218,13 @@ body {
         color: white;
         font-size: 22px;
         cursor: pointer;
-        margin-right: 15px; /* Creates distance between the menu and the profile picture */
+        margin-right: 0; /* Resetting this to let 'gap' handle it */
         padding: 0;
+        flex-shrink: 0; /* Prevents the icon from being compressed on small screens */
+    }
+
+    .header-left .avatar {
+        margin-right: 0; /* Prevents double-spacing with the new gap property */
     }
 
     .sidebar-overlay {
