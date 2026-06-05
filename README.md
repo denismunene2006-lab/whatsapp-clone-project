@@ -96,7 +96,7 @@ whatsappp-clone/
 Denis Munene
 Frontend Developer | Software Engineering Student
 
----
+------
 
 ## Support
 If you like this project, consider giving it a star.
