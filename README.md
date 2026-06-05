@@ -14,6 +14,12 @@ A responsive WhatsApp Web-inspired chat UI built with HTML, CSS, and JavaScript.
 - Smart auto-replies
 - Typing indicator simulation
 - Separate chats for multiple contacts
+- Auto-scroll to bottom on input focus (Mobile Fix)
+
+### Visual Enhancements
+- WhatsApp "Doodle" chat background
+- Message bubbles with directional "tails"
+- Modern rounded pill-style input bar
 - LocalStorage message saving
 
 ### Emoji Picker
@@ -39,8 +45,8 @@ A responsive WhatsApp Web-inspired chat UI built with HTML, CSS, and JavaScript.
 - Toggle dark/light theme
 
 ### Responsive Design
-- Mobile-friendly layout
-- Optimized for phones and tablets
+- Dynamic Viewport Height (`100dvh`) for better mobile browser support
+- Fixed visibility issues on small phones when typing
 
 ---
 

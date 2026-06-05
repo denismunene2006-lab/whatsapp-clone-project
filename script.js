@@ -35,23 +35,27 @@ function renderMessages() {
         const div = document.createElement("div");
         div.classList.add("message", msg.type);
 
-        div.innerHTML = `
-            ${msg.text}
-            <span class="time">
-                ${msg.time}
-                ${msg.type === "sent" ? 
-                `<span class="tick">${msg.seen ? "✔✔" : "✔"}</span>` 
-                : ""}
-            </span>
-            <span class="delete-btn">❌</span>
-        `;
+        // Safely add message text
+        const textSpan = document.createElement("span");
+        textSpan.textContent = msg.text + " "; 
+        div.appendChild(textSpan);
 
-        div.querySelector(".delete-btn").onclick = () => {
+        // Add time and ticks
+        const infoSpan = document.createElement("span");
+        infoSpan.className = "time";
+        infoSpan.innerHTML = `${msg.time} ${msg.type === "sent" ? `<span class="tick">${msg.seen ? "✔✔" : "✔"}</span>` : ""}`;
+        div.appendChild(infoSpan);
+
+        // Add delete button
+        const delBtn = document.createElement("span");
+        delBtn.className = "delete-btn";
+        delBtn.textContent = " ❌";
+        delBtn.onclick = () => {
             chats[currentChat].splice(index, 1);
             saveChats();
             renderMessages();
         };
-
+        div.appendChild(delBtn);
         chatBox.appendChild(div);
     });
 
@@ -134,6 +138,11 @@ sendBtn.onclick = sendMessage;
 
 messageInput.addEventListener("keypress", e => {
     if (e.key === "Enter") sendMessage();
+});
+
+messageInput.addEventListener("focus", () => {
+    // Scroll to bottom when keyboard appears to keep the input and context visible
+    setTimeout(() => chatBox.scrollTop = chatBox.scrollHeight, 300);
 });
 
 // Emoji Picker
