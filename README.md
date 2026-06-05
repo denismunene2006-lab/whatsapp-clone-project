@@ -15,6 +15,8 @@ A responsive WhatsApp Web-inspired chat UI built with HTML, CSS, and JavaScript.
 - Typing indicator simulation
 - Separate chats for multiple contacts
 - Auto-scroll to bottom on input focus (Mobile Fix)
+- Sliding sidebar drawer (Hamburger menu) for mobile navigation
+- Sidebar overlay backdrop for intuitive mobile interaction
 
 ### Visual Enhancements
 - WhatsApp "Doodle" chat background
@@ -47,6 +49,8 @@ A responsive WhatsApp Web-inspired chat UI built with HTML, CSS, and JavaScript.
 ### Responsive Design
 - Dynamic Viewport Height (`100dvh`) for better mobile browser support
 - Fixed visibility issues on small phones when typing
+- Mobile-first sliding sidebar navigation
+- Optimized header spacing using Flexbox gap for a cleaner UI
 
 ---
 
