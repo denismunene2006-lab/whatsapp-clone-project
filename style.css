@@ -208,7 +208,14 @@ body {
 @media (max-width: 768px) {
 
     .menu-btn {
-        display: block; /* Show only on mobile screens */
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+        margin-right: 15px; /* Creates distance between the menu and the profile picture */
+        padding: 0;
     }
 
     .sidebar-overlay {
