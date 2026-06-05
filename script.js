@@ -9,7 +9,9 @@ const emojiBtn = document.getElementById("emojiBtn");
 const emojiPicker = document.getElementById("emojiPicker");
 const statusText = document.getElementById("statusText");
 const headerAvatar = document.getElementById("headerAvatar");
-const backBtn = document.getElementById("backBtn");
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.querySelector(".sidebar");
+const sidebarOverlay = document.getElementById("sidebarOverlay");
 const appContainer = document.querySelector(".app");
 
 let currentChat = "Joy 💚";
@@ -194,13 +196,20 @@ contacts.forEach(contact => {
 
         renderMessages();
 
-        // Show the chat section on mobile
-        appContainer.classList.add("chat-active");
+        // Close sidebar drawer on mobile after selection
+        sidebar.classList.remove("active");
+        sidebarOverlay.classList.remove("active");
     };
 });
 
-backBtn.onclick = () => {
-    appContainer.classList.remove("chat-active");
+menuBtn.onclick = () => {
+    sidebar.classList.toggle("active");
+    sidebarOverlay.classList.toggle("active");
+};
+
+sidebarOverlay.onclick = () => {
+    sidebar.classList.remove("active");
+    sidebarOverlay.classList.remove("active");
 };
 
 // Dark mode
@@ -209,14 +218,15 @@ darkToggle.onclick = () => {
 };
 
 // Search contacts
-searchInput.onkeyup = function () {
-    const filter = this.value.toLowerCase();
+// 'input' event is more robust than 'keyup' as it handles mouse-pasted text too
+searchInput.addEventListener("input", (e) => {
+    const filter = e.target.value.toLowerCase();
 
     contacts.forEach(contact => {
         const name = contact.querySelector("span").textContent.toLowerCase();
         contact.style.display = name.includes(filter) ? "flex" : "none";
     });
-};
+});
 
 // Initial load
 renderMessages();

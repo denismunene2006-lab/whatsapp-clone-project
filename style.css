@@ -16,6 +16,7 @@ body {
     background: #075e54;
     color: white;
     padding: 15px;
+    transition: transform 0.3s ease;
 }
 
 .sidebar input {
@@ -206,19 +207,43 @@ body {
 
 @media (max-width: 768px) {
 
-    .app {
-        flex-direction: column;
+    .menu-btn {
+        display: block; /* Show only on mobile screens */
+    }
+
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .sidebar-overlay.active {
+        display: block;
     }
 
     .sidebar {
-        width: 100%;
-        height: 40%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 280px;
+        height: 100%;
+        z-index: 1000;
+        transform: translateX(-100%); /* Hidden by default */
         overflow-y: auto;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    }
+
+    .sidebar.active {
+        transform: translateX(0); /* Slide in */
     }
 
     .chat-section {
         width: 100%;
-        height: 60%;
     }
 
     .chat-box {
@@ -232,51 +257,5 @@ body {
 
     .chat-input {
         position: relative;
-    }
-
-    .emoji-picker {
-        bottom: 70px;
-        left: 10px;
-    }
-}
-
-/* Extra small phones */
-@media (max-width: 480px) {
-
-    .sidebar {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    .chat-section {
-        display: none;
-        width: 100%;
-        height: 100%;
-    }
-
-    /* Navigation state: when a chat is open */
-    .app.chat-active .sidebar {
-        display: none;
-    }
-
-    .app.chat-active .chat-section {
-        display: flex;
-    }
-
-    .back-btn {
-        display: block;
-    }
-
-    .chat-header h3 {
-        font-size: 16px;
-    }
-
-    .chat-input input {
-        font-size: 14px;
-    }
-
-    .chat-input button {
-        padding: 8px;
     }
 }
