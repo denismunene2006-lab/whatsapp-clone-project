@@ -9,6 +9,8 @@ const emojiBtn = document.getElementById("emojiBtn");
 const emojiPicker = document.getElementById("emojiPicker");
 const statusText = document.getElementById("statusText");
 const headerAvatar = document.getElementById("headerAvatar");
+const backBtn = document.getElementById("backBtn");
+const appContainer = document.querySelector(".app");
 
 let currentChat = "Joy 💚";
 let chats = JSON.parse(localStorage.getItem("whatsappChats")) || {};
@@ -43,7 +45,14 @@ function renderMessages() {
         // Add time and ticks
         const infoSpan = document.createElement("span");
         infoSpan.className = "time";
-        infoSpan.innerHTML = `${msg.time} ${msg.type === "sent" ? `<span class="tick">${msg.seen ? "✔✔" : "✔"}</span>` : ""}`;
+        infoSpan.textContent = msg.time + " ";
+        
+        if (msg.type === "sent") {
+            const tickSpan = document.createElement("span");
+            tickSpan.className = "tick";
+            tickSpan.textContent = msg.seen ? "✔✔" : "✔";
+            infoSpan.appendChild(tickSpan);
+        }
         div.appendChild(infoSpan);
 
         // Add delete button
@@ -184,8 +193,15 @@ contacts.forEach(contact => {
         headerAvatar.src = imgSrc;
 
         renderMessages();
+
+        // Show the chat section on mobile
+        appContainer.classList.add("chat-active");
     };
 });
+
+backBtn.onclick = () => {
+    appContainer.classList.remove("chat-active");
+};
 
 // Dark mode
 darkToggle.onclick = () => {
