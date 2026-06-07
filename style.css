@@ -13,8 +13,8 @@ body {
 /* Sidebar */
 .sidebar {
     width: 30%;
-    background: #075e54;
-    color: white;
+    background: #5cb3a9;
+    color: rgb(234, 227, 227);
     padding: 15px;
     transition: transform 0.3s ease;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .contact:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(110, 62, 194, 0.2);
 }
 
 /* Chat Section */
