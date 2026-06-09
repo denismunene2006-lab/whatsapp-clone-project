@@ -17,7 +17,7 @@ const appContainer = document.querySelector(".app");
 let currentChat = "Joy 💚";
 let chats = JSON.parse(localStorage.getItem("whatsappChats")) || {};
 
-const emojis = ["😀","😂","😍","🥺","🔥","😎","💚","👍","😭","😅"];
+const emojis = ["😀", "", "😍", "🥺", "🔥", "😎", "💚", "👍", "😭", "😅", "🙌", "✨", "🎉", "🤔", "👀", "🚀", "💯", "🙏", "💔", "🌹", "🎂", "🍕", "🌍", "💻", "⭐", "🌈", "✅", "❌", "👋", "🤝"];
 
 function saveChats() {
     localStorage.setItem("whatsappChats", JSON.stringify(chats));
@@ -93,21 +93,32 @@ function createMessage(text, type) {
 function smartReply(userText) {
     const text = userText.toLowerCase();
 
-    if (text.includes("hi") || text.includes("hello"))
-        return "Hey Denis 😌";
+    if (text.includes("hi") || text.includes("hello") || text.includes("hey"))
+        return "Hey😀";
+    if (text.includes("how are you") || text.includes("how's it going"))
+        return "I'm doing great! How are things with you? 😊";
     if (text.includes("love"))
         return "Aww that’s sweet 💚";
     if (text.includes("miss"))
         return "I miss you too 🥺";
-    if (text.includes("how are you"))
-        return "I'm good 😊 What about you?";
+    if (text.includes("thanks") || text.includes("thank you"))
+        return "You're very welcome! ✨";
+    if (text.includes("bye") || text.includes("good night") || text.includes("goodnight"))
+        return "Catch you later! 👋 Have a good one.";
+    if (text.includes("what's up") || text.includes("sup"))
+        return "Not much, just catching up on some messages. You? ☕";
+    if (text.includes("haha") || text.includes("lol") || text.includes("lmao"))
+        return "Haha, I'm glad you're laughing! 😂";
 
     const randomReplies = [
         "Tell me more 👀",
         "Really? 😅",
         "Okay 💚",
-        "Haha 😂",
-        "Interesting..."
+        "That's interesting, go on...",
+        "I see! ✨",
+        "Wait, what? 😂",
+        "Mind blown! 🤯",
+        "Cool! 👍"
     ];
 
     return randomReplies[Math.floor(Math.random() * randomReplies.length)];
