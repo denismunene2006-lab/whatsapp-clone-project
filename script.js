@@ -233,6 +233,7 @@ function switchChat(contactId) {
     }
 
     renderMessages();
+    renderContacts(searchInput.value); // Ensure sidebar highlight updates
 
     // Close sidebar drawer on mobile after selection
     sidebar.classList.remove("active");

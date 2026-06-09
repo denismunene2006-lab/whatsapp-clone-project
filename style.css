@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,6 +10,7 @@ body {
 
 .app {
     display: flex;
+    height: 100vh;
     height: 100dvh; /* Dynamic viewport height handles mobile browsers better */
     overflow: hidden;
 }
