@@ -16,20 +16,8 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <h2>Chats</h2>
-        <input type="text" id="search" placeholder="Search contact...">
+        <input type="text" id="searchInput" placeholder="Search contact...">
         <ul id="contactList">
-    <li class="contact">
-        <img src="https://i.pravatar.cc/40?img=5" class="avatar">
-        <span>Joy 💚</span>
-    </li>
-    <li class="contact">
-        <img src="https://i.pravatar.cc/40?img=8" class="avatar">
-        <span>Brian</span>
-    </li>
-    <li class="contact">
-        <img src="https://i.pravatar.cc/40?img=12" class="avatar">
-        <span>Sarah</span>
-    </li>
 </ul>
     </div>
 
@@ -44,7 +32,10 @@
             <small id="statusText">online</small>
         </div>
     </div>
-    <button id="darkModeToggle">🌙</button>
+    <div class="header-right">
+        <button id="clearChatBtn" title="Clear Chat History">🗑️</button>
+        <button id="darkModeToggle">🌙</button>
+    </div>
 </div>
 
         <div class="chat-box" id="chatBox"></div>

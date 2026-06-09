@@ -33,6 +33,11 @@ body {
     cursor: pointer;
 }
 
+.contact.active {
+    background: rgba(18, 140, 126, 0.15);
+    border-left: 4px solid #128c7e;
+}
+
 .contact:hover {
     background: rgba(110, 62, 194, 0.2);
 }
@@ -52,6 +57,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header-right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#clearChatBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
 }
 
 .chat-box {
@@ -184,6 +203,15 @@ body {
 .offline {
     color: lightgray;
 }
+
+/* Empty Chat Message */
+.empty-chat-message {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin-top: 20px;
+    padding: 10px;
+}
 /* Avatar */
 .avatar {
     width: 40px;
@@ -195,6 +223,20 @@ body {
 .contact {
     display: flex;
     align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.last-message {
+    font-size: 12px;
+    color: #e0e0e0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .header-left {
