@@ -1,8 +1,8 @@
-# WhatsApp Web Clone (Frontend)
+# WhatsApp Web Clone (Frontend)🌟
 
 A responsive WhatsApp Web-inspired chat UI built with HTML, CSS, and JavaScript. It simulates multi-contact conversations, typing indicators, message ticks, emoji picking, dark mode, and localStorage persistence with no backend required.
 
-## Project Link
+## Project Link🔗
 -https://denismunene2006-lab.github.io/whatsapp-clone-project/
 
 ---
@@ -99,4 +99,4 @@ Frontend Developer | Software Engineering Student
 ------
 
 ## Support
-If you like this project, consider giving it a star.
+If you like this project, consider giving it a star🌟🌟⭐.
