@@ -2,7 +2,7 @@
 
 A responsive WhatsApp Web-inspired chat UI built with HTML, CSS, and JavaScript. It simulates multi-contact conversations, typing indicators, message ticks, emoji picking, dark mode, and localStorage persistence with no backend required.
 
-## Project Link
+## Project Link🔗
 -https://denismunene2006-lab.github.io/whatsapp-clone-project/
 
 ---
