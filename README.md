@@ -1,4 +1,4 @@
-# 💬 WhatsApp Web Clone
+# 💬 WhatsApp Web Clone.
 
 A fully responsive **WhatsApp Web** frontend clone built with **HTML**, **CSS**, and **Vanilla JavaScript**. This project simulates a multi-contact chat interface with typing indicators, message read receipts, emoji picker, dark mode, and localStorage persistence — all without a backend.
 
