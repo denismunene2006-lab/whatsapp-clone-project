@@ -105,7 +105,7 @@ Frontend Developer · Software Engineering Student
 
 ## ⭐ Support
 
-If you found this project helpful or interesting, consider giving it a **star** on GitHub — it means a lot!
+If you found this project helpful or interesting, consider giving it a **star** on GitHub — it means a lot!✨
 
 ---
 
