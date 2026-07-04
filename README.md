@@ -97,7 +97,7 @@ whatsappp-clone/
 ## 👨‍💻 Author
 
 **Denis Munene**  
-Frontend Developer · Software Engineering Student
+Frontend Developer · Software Engineering Student.
 
 [![GitHub](https://img.shields.io/badge/GitHub-@denismunene2006--lab-181717?style=flat&logo=github)](https://github.com/denismunene2006-lab)
 
